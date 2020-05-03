@@ -1,0 +1,304 @@
+// ===================== RULES =============================================
+
+$main-orange: #EC9D00;
+$dark-brown: #C96E12;
+$dark-yellow: #FAE96F;
+$light-yellow: #fcf8c0;
+$darkest-brown: #914c06;
+
+
+
+
+*{
+    overflow-x: hidden;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+
+nav{
+    background-color: green;
+}
+
+body{
+    background-color: $light-yellow;
+}
+
+
+// ========================= LOADER ======================================
+
+#loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .spinner {
+    border: 5px solid $main-orange;
+    border-radius: 50%;
+    border-top: 5px solid $dark-brown;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 1s linear infinite;
+    /* Safari */
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.4s, opacity 0.4s linear;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  // ============================== NAV ==================================================
+
+  nav{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: $darkest-brown;
+      z-index: 20;
+      a{
+          color: white;
+          text-decoration: none;
+          margin: 1% 6%;
+          font-weight: 700;
+      }
+      a:hover{
+          color: $light-yellow;
+      }
+  }
+
+
+
+
+  // ========================= HOME ================================================
+
+  #home{
+      margin-top: 6vh;
+      h1{
+          text-align: center;
+          font-size: 3rem;
+          margin-top: 3vh;
+      }
+  }
+
+  .search-bar-container{
+      width: 20%;
+      margin: 1vh auto;
+      display: flex;
+      justify-content: center;
+      input{
+          margin: auto;
+      }
+  }
+  .beer-overview{
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      padding: 2.5%;
+      margin: auto;
+      flex-wrap: wrap;
+      max-width: 1000px;
+  }
+  .beer-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: white;
+    padding: 30px 0;
+    margin: 3vh 0;
+    border-radius: 15px;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    img{
+        width: 25%;
+        height: auto;
+    }
+    h2{
+        color: $darkest-brown;
+        margin: 10px 0;
+    }
+    h4{
+        color: black;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+  }
+
+  .beer-card:hover{
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    cursor: pointer;
+    h2, h4{
+        color: $main-orange;
+        -webkit-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+        transition: 0.3s ease;
+    }
+  }
+
+
+  .filter{
+      position: fixed;
+      left: 0%;
+      top: 0;
+      bottom: 0;
+      margin-bottom: auto;
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      height: 30vh;
+      width: 10%;
+      background-color: $dark-brown;
+      color: white;
+      padding: 2vh 1%;
+      button{
+          margin: 5% auto;
+          width: 130px;
+          padding: 5px 0;
+      }
+      button:hover{
+          cursor: pointer;
+      }
+      h3{
+          text-align: center;
+          margin-top: 5px;
+      }
+      h4{
+          margin-top: 10px;
+          text-align: center;
+      }
+  }
+
+
+
+    // ========================= detailview ================================================
+
+.detail-view{
+    display: flex;
+    height: 100vh;
+}
+
+
+.detail-left, .detail-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-left{
+    width: 70%;
+    h3{
+        width: 70%;
+        margin: auto;
+    }
+}
+
+.beer-facts-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 2vh auto;
+    height: 50%;
+    justify-content: space-around;
+}
+
+.beer-fact{
+    h5{
+        font-size: 1.5rem;
+    }
+}
+
+.detail-right{
+    width: 30%;
+    h1{
+        color: $darkest-brown;
+        font-size: 2rem;
+        margin-top: 3vh;
+    }
+}
+
+
+// ============================== CREATE =================================================
+
+.create-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin: 15vh auto;
+    height: 70vh;
+    input{
+        padding: 15px 0;
+        width: 70%;
+    }
+    button{
+        width: 30%;
+        padding: 10px 10px;
+        color: white;
+        background-color: $dark-brown;
+        border: none;
+        -webkit-transition: 0.4s ease;
+        -o-transition: 0.4s ease;
+        transition: 0.4s ease;
+    }
+
+    button:hover{
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+        -webkit-transition: 0.4s ease;
+        -o-transition: 0.4s ease;
+        transition: 0.4s ease;
+        cursor: pointer;
+    }
+}
