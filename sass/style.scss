@@ -278,8 +278,14 @@ body{
     margin: 15vh auto;
     height: 70vh;
     input{
-        padding: 15px 0;
+        height: 30px;
         width: 70%;
+    }
+    textarea{
+        width: 70%;
+    }
+    #long-desc{
+        height: 100px;
     }
     button{
         width: 30%;

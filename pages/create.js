@@ -13,7 +13,7 @@ export default class CreatePage {
         <input placeholder="Type" id="beer-type" required>
         <input placeholder="IBU" id="beer-IBU" required>
         <input placeholder="kort beskrivelse" id="short-desc" required>
-        <input placeholder="lang beskrivelse" id="long-desc" required>
+        <textarea placeholder="lang beskrivelse" id="long-desc" cols="40" rows="5" required></textarea>
         <input type="url" id="beer-img" placeholder="Indtast url for billede" required>  
 
         <button id="createBeer" onclick="create()">Tilføj Øl</button>
